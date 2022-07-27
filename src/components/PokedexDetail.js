@@ -5,7 +5,7 @@ import { useParams } from 'react-router-dom';
 const PokedexDetail = ({characterUrl}) => {
 
     const [character, setCharacter] = useState({})
-    const [movements, setMovements] = useState([])
+    const [movements, setMovements] = useState({})
 
     const { id } = useParams()
 
