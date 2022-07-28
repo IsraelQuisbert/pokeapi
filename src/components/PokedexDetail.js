@@ -40,7 +40,9 @@ const PokedexDetail = ({characterUrl}) => {
             <p>Movements:</p>
             {
                 movements.map(movement =>(
-                    <p>{movement.move?.name}</p>
+                    <p key={movement.move?.name}>
+                        {movement.move?.name}
+                    </p>
                 ))
             }
         </div>
