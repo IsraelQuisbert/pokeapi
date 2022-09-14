@@ -105,8 +105,11 @@ select{
 
 .super-cards{
   display: grid;
-  grid-template-columns: 300px 300px 300px 300px;
-  grid-template-rows: 300px 300px 300px 300px 300px;
+  gap: 50px;
+  grid-template-columns: 210px 210px 210px 210px;
+  grid-template-rows: 300px;
+  grid-auto-rows: 300px;
+  justify-content: center;
 }
 
 .card{
@@ -115,6 +118,9 @@ select{
   border-radius: 10%;
   /* border: 2px solid red; */
   background-color: limegreen;
+}
+.card:hover{
+  cursor: pointer;
 }
 
 .card-total{
@@ -147,6 +153,51 @@ select{
 .icons>img{
   padding: 0px;
   width: 120px;
+}
+
+
+
+@media only screen and ( max-width: 1024px ){
+
+  .super-cards{
+    grid-template-columns: 210px 210px 210px;
+  }
+
+}
+
+
+
+
+
+
+
+@media only screen and ( max-width: 768px ){
+
+  .super-cards{
+    grid-template-columns: 210px 210px;
+  }
+
+  
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and ( max-width: 550px ){
+
+  .super-cards{
+    grid-template-columns: 210px;
+  }
+
 }
 
 

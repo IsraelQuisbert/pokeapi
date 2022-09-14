@@ -70,6 +70,7 @@ const Pokedex = () => {
                     pokemons.map(pokemon => (
                         
                             <CardPokedex 
+                                
                                 characterUrl={pokemon.url !== undefined ? pokemon.url : pokemon.pokemon.url}
                                 key={pokemon.url !== undefined ? pokemon.url : pokemon.pokemon.url}
                             />
