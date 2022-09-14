@@ -26,9 +26,11 @@ const PokedexDetail = ({characterUrl}) => {
             <img src={character.sprites?.other.home?.front_default} alt="" width="200px"/>
             <p>{character.name}</p>
 
-            <p><b>Types:</b> {character.types?.[0].type?.name}, {character.types?.[1].type?.name}</p>
+            <p><b>Types:</b> {character.types?.[0].type?.name}, 
+            {/* {character.types?.[1].type?.name} */}
+            </p>
 
-            <p>Habilidades: {character.abilities?.[0].ability?.name}, {character.abilities?.[1].ability?.name}</p>
+            <p><b>Habilidades: </b>{character.abilities?.[0].ability?.name}, {character.abilities?.[1].ability?.name}</p>
             
             <p>Stats</p>
             <p><b>HP: </b>{character.stats?.[0].base_stat}</p>
@@ -37,11 +39,11 @@ const PokedexDetail = ({characterUrl}) => {
             <p><b>Speed: </b>{character.stats?.[5].base_stat}</p>
 
 
-            <p>Movements:</p>
+            <p><b>Movements: </b></p>
             {
                 movements.map(movement =>(
                     <p key={movement.move?.name}>
-                        {movement.move?.name}
+                        {movement.move?.name},
                     </p>
                 ))
             }

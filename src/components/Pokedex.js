@@ -15,7 +15,7 @@ const Pokedex = () => {
     const [types, setTypes] = useState([])
 
     useEffect(() =>{
-        axios.get("https://pokeapi.co/api/v2/pokemon?offset=20&limit=20")
+        axios.get("https://pokeapi.co/api/v2/pokemon?offset=0&limit=20")
             .then(res => setPokemons(res.data.results))
 
         axios.get("https://pokeapi.co/api/v2/type/")

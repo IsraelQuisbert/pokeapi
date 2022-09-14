@@ -17,8 +17,6 @@ const CardPokedex = ({characterUrl}) => {
 
     // function types() {
 
-    
-
     return (
         <div className='card'>
 
