@@ -25,7 +25,7 @@ const UserInput = () => {
             <img src={pokedex} alt="" />
             <h2>¡Hola entrenador!</h2>
             <h3>Para poder comenzar, dame tu nombre</h3>
-            <form>
+            <form className='input'>
                 <input
                     placeholder='Tu nombre' 
                     type="text" 
