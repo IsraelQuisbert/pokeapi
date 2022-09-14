@@ -177,9 +177,17 @@ select{
     grid-template-columns: 210px 210px;
   }
 
-  
+  .selectors{
+    flex-direction: column-reverse;
+  }
 
+  .form input{
+    width: 200px;
+  }
 
+  .form button{
+    width: 100px;
+  }
 }
 
 
