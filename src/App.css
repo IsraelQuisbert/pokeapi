@@ -227,10 +227,15 @@ select{
   }
 
   .input input{
-    width: 150px;
+    width: 250px;
+    font-size: 1rem;
   }
   .input button{
-    width: 100px;
+    width: 150px;
+    font-size: 1rem;
+  }
+  .home h3{
+    padding: 0 20px;
   }
 
 
