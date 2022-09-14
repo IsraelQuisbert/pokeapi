@@ -177,11 +177,14 @@ select{
     grid-template-columns: 210px 210px;
   }
 
-  .selectors{
+  /* .selectors{
     flex-direction: column;
     padding-bottom: 30px;
     height: 150px;
-  }
+    /* gap: 0px;
+    justify-content: center;
+    align-items: center;
+  } */
 
   .form input{
     width: 200px;
@@ -189,6 +192,12 @@ select{
   }
 
   .form button{
+    width: 100px;
+  }
+  .form input{
+    margin: 0px;
+  }
+  .selectors select{
     width: 100px;
   }
 }
