@@ -43,7 +43,18 @@ const Pokedex = () => {
             </div>
 
             <p><b>Bienvenido: {user}</b>, atrápalos a todos!!!</p>
+            
             <div className='selectors'>
+                <form className='form'>
+                    <input
+                        type="text"
+                        value={pokemonSearch}
+                        onChange={e => setPokemonSearch(e.target.value)}
+                        placeholder="Busca un Pokemon"
+                        />
+                    <button onClick={search}>Buscar</button>
+                </form>
+
                 <select onChange={filterPOkemon}>
                     <option>selecciona el tipo</option>
                     {
@@ -55,22 +66,16 @@ const Pokedex = () => {
                         ))
                     }
                 </select>
-                <form className='form'>
-                    <input
-                        type="text"
-                        value={pokemonSearch}
-                        onChange={e => setPokemonSearch(e.target.value)}
-                        placeholder="Busca un Pokemon"
-                        />
-                    <button onClick={search}>Buscar</button>
-                </form>
+
             </div>
+
+
             <div className='super-cards'>
                 {
                     pokemons.map(pokemon => (
                         
                             <CardPokedex 
-                                
+
                                 characterUrl={pokemon.url !== undefined ? pokemon.url : pokemon.pokemon.url}
                                 key={pokemon.url !== undefined ? pokemon.url : pokemon.pokemon.url}
                             />

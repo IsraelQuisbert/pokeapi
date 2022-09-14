@@ -91,7 +91,7 @@ div>p>b{
 
 .selectors{
   display: flex;
-  flex-direction: row-reverse;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
 }
@@ -178,11 +178,14 @@ select{
   }
 
   .selectors{
-    flex-direction: column-reverse;
+    flex-direction: column;
+    padding-bottom: 30px;
+    height: 150px;
   }
 
   .form input{
     width: 200px;
+    font-size: 1rem;
   }
 
   .form button{
