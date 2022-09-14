@@ -27,7 +27,7 @@ const UserInput = () => {
             <h3>Para poder comenzar, dame tu nombre</h3>
             <form className='input'>
                 <input
-                    placeholder='Tu nombre' 
+                    placeholder='ingresá tu nombre' 
                     type="text" 
                     value={userName} 
                     onChange={e => setUserName(e.target.value)} 
