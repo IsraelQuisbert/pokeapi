@@ -1,6 +1,8 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
+import pokedex from '../img/pokedex.png'
+
 
 const PokedexDetail = ({characterUrl}) => {
 
@@ -8,6 +10,7 @@ const PokedexDetail = ({characterUrl}) => {
     const [movements, setMovements] = useState([])
 
     const { id } = useParams()
+    const navigate = useNavigate()
 
     useEffect( () => {
         axios.get(`https://pokeapi.co/api/v2/pokemon/${id}`)
@@ -23,9 +26,22 @@ const PokedexDetail = ({characterUrl}) => {
         <div className='pokedex-detail'>
             {/* <h1>Pokedex Detail</h1>
             <p>Pokemon con id: <b>{id}</b></p> */}
+            <div className="barrier">
+                <div className="red">
+                    <div className="tittle">
+                        <img className='pokedex' src={pokedex} alt="" />
+                    </div>
+                </div>
+                <div className="black"></div>
+            </div>
+            <div className="back">
+                <button onClick={()=>navigate('/pokedex')}>
+                    Volver
+                </button>
+            </div>
 
 
-            <img src={character.sprites?.other.home?.front_default} alt="" width="200px"/>
+            {/* <img src={character.sprites?.other.home?.front_default} alt="" width="200px"/> */}
             <img src={character.sprites?.other.dream_world?.front_default} alt="" width="200px"/>
             <p>{character.name}</p>
 
@@ -33,10 +49,7 @@ const PokedexDetail = ({characterUrl}) => {
             {/* {character.types?.[1].type?.name} */}
             </p>
 
-            <p><b>Habilidades: </b>{character.abilities?.[0].ability?.name}, {character.abilities?.[1].ability?.name && (
-            character.abilities?.[1].ability?.name
-            )}
-            
+            <p><b>Special ability: </b>{character.abilities?.[0].ability?.name}
             {/* {character.abilities?.[1].ability?.name} */}
             </p>
             

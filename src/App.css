@@ -27,7 +27,7 @@
 
 .home h3{
   font-size: 30px;
-  padding-bottom: 30px;
+  /* padding-bottom: 30px; */
 }
 
 form{
@@ -55,32 +55,37 @@ button:hover{
   cursor: pointer;
 }
 
-.barrier{
-  display: flex;
-  flex-direction: column;
-}
 
-.red{
-  height: 80px;
-  background-color: #FE1936;
-}
+/** BARRERA SUPERIOR **/
 
-.black{
-  height: 50px;
-  background-color: #0c0c0c;
-}
+  .barrier{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+  }
+
+  .red{
+    height: 80px;
+    background-color: #FE1936;
+  }
+
+  .black{
+    height: 50px;
+    background-color: #0c0c0c;
+  }
+
+  .title{
+    display: flex;
+  }
+
+  .pokedex{
+    padding: 0;
+    width: 400px;
+  }
+
 
 
 /******* POKEDEX **********/
-
-.title{
-  display: flex;
-}
-
-.pokedex{
-  padding: 0;
-  width: 400px;
-}
 
 div>p{
   font-size: 30px;
@@ -237,8 +242,19 @@ select{
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 100vw;
 }
 
+.back{
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+}
+.back>button{
+  border-radius: 10px;
+  margin-left: 10px;
+}
 
 .movements>p{
   background-color: #10c3cf;
@@ -259,7 +275,7 @@ select{
 
 
 
-
+/**! De 1024px pa abajo */
 @media only screen and ( max-width: 1024px ){
 
   /** USER INPUT **/
