@@ -120,8 +120,77 @@ select{
   height: 230px;
   border-radius: 10%;
   /* border: 2px solid red; */
-  background-color: limegreen;
+  /* background-color: limegreen; */
 }
+
+.normal{
+  background-color: #a7a07c;
+}
+.fighting{
+  background-color: #7a7852;
+}
+.flying{
+  background-color: #10c3cf;
+}
+.poison{
+  background-color: #141a77;
+}
+.ground{
+  background-color: #5a5c4d;
+}
+.rock{
+  background-color: #4b4848;
+}
+.bug{
+  background-color: #1c7909;
+}
+.ghost{
+  background-color: #2d50eb;
+}
+.steel{
+  background-color: #dddad8;
+}
+.fire{
+  background-color: #9e0404;
+}
+.water{
+  background-color: #3ea1da;
+}
+.grass{
+  background-color: #25ac03;
+}
+.electric{
+  background-color: #d2e621;
+}
+.psychic{
+  background-color: #6c0186;
+}
+.ice{
+  background-color: #83d5ee;
+}
+.dragon{
+  background-color: #630202;
+}
+.dark{
+  background-color: #222020;
+}
+.fairy{
+  background-color: #5bd8d8de;
+}
+.shadow{
+  background-color: #8d5103;
+}
+.unknown{
+  background-color: #ffffff;
+}
+
+
+
+
+
+
+
+
 .card:hover{
   cursor: pointer;
 }
@@ -157,6 +226,37 @@ select{
   padding: 0px;
   width: 120px;
 }
+
+
+
+/** POKEDEX DETAILS **/
+
+.pokedex-detail{
+  background-color: #e5e5e5;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.movements>p{
+  background-color: #10c3cf;
+  border-radius: 3px;
+  font-size: 1rem;
+}
+
+.movements{
+  display: grid;
+  grid-template-columns: 140px 140px 140px 140px;
+  grid-auto-rows: 40px;
+  gap: 10px;
+  align-items: center;
+}
+
+
+
+
 
 
 
