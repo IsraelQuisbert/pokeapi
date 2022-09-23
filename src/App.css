@@ -234,6 +234,8 @@ select{
 
 
 
+
+
 /** POKEDEX DETAILS **/
 
 .pokedex-detail{
@@ -256,6 +258,37 @@ select{
   margin-left: 10px;
 }
 
+.box-detail{
+  border-radius: 25px;
+  box-shadow: 10px 10px 10px rgb(197, 11, 11);
+  background-color: #2de5eb;
+  width: 760px;
+  margin: 50px 0;
+  padding: 50px;
+}
+
+.flex-row{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 50px;
+}
+
+.stats{
+  display: flex;
+  flex-direction: column;
+  /* justify-content: left; */
+  align-items: start;
+}
+
+
+
+
+
+
+
+
+
 .movements>p{
   background-color: #10c3cf;
   border-radius: 3px;
@@ -268,6 +301,7 @@ select{
   grid-auto-rows: 40px;
   gap: 10px;
   align-items: center;
+  justify-content: center;
 }
 
 
@@ -295,7 +329,7 @@ select{
 
 
 
-
+/**! de 768 pa abajo */
 @media only screen and ( max-width: 768px ){
 
   /** USER INPUT **/
@@ -323,18 +357,37 @@ select{
   .selectors select{
     width: 150px;
   }
+
+
+  /** POKEDEX DETAIL **/
+  
+  .box-detail{
+    width: 80%;
+  }
+  .flex-row2{
+    flex-direction: column;
+  }
+
+  .movements{
+    grid-template-columns: 140px 140px 140px;
+  }
+}
+
+
+
+/**! de 670 pa abajo */
+@media only screen and ( max-width: 670px ){
+
+  .movements{
+    grid-template-columns: 140px 140px;
+  }
+
 }
 
 
 
 
-
-
-
-
-
-
-
+/**! de 550 pa abajo */
 @media only screen and ( max-width: 550px ){
 
   /** USER INPUT **/
@@ -380,5 +433,7 @@ select{
   }
 
 }
+
+
 
 

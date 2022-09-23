@@ -8,6 +8,8 @@ const PokedexDetail = ({characterUrl}) => {
 
     const [character, setCharacter] = useState({})
     const [movements, setMovements] = useState([])
+    const [types, setTypes] = useState([])
+    const [abilities, setAbilities] = useState([])
 
     const { id } = useParams()
     const navigate = useNavigate()
@@ -17,6 +19,8 @@ const PokedexDetail = ({characterUrl}) => {
             .then(res => {
                 setCharacter(res.data)
                 setMovements(res.data.moves)
+                setTypes(res.data.types)
+                setAbilities(res.data.abilities)
             })
     },[characterUrl, id])
 
@@ -24,8 +28,7 @@ const PokedexDetail = ({characterUrl}) => {
 
     return (
         <div className='pokedex-detail'>
-            {/* <h1>Pokedex Detail</h1>
-            <p>Pokemon con id: <b>{id}</b></p> */}
+
             <div className="barrier">
                 <div className="red">
                     <div className="tittle">
@@ -34,44 +37,81 @@ const PokedexDetail = ({characterUrl}) => {
                 </div>
                 <div className="black"></div>
             </div>
+
             <div className="back">
                 <button onClick={()=>navigate('/pokedex')}>
                     Volver
                 </button>
             </div>
 
+            <div className='box-detail'>
+                <div>
+                    <img src={character.sprites?.other.dream_world?.front_default} alt="" width="200px"/>
+                </div>
+                <div>                    
+                    <p>#{character.id}</p>
+                </div>
+                <div>
+                    <p>{character.name}</p>
+                </div>
+                <div className='flex-row'>
+                    
+                        <p>Height: <br/> {character.height}</p>
+                        <p>Weight: <br /> {character.weight}</p>
+                    
+                </div>
 
-            {/* <img src={character.sprites?.other.home?.front_default} alt="" width="200px"/> */}
-            <img src={character.sprites?.other.dream_world?.front_default} alt="" width="200px"/>
-            <p>{character.name}</p>
+                <div className='flex-row flex-row2'>
+                    <div>
+                        <p><b>Types:</b></p>
+                        <div className='flex-row'>
+                            {
+                                types.map(type =>(
+                                    <p key={type.type?.name} >
+                                        {type.type?.name}
+                                    </p>
+                                ))
+                            }
+                        </div>
+                    </div>
+                    <div>
+                        <p><b>Special ability: </b></p>
+                        <div className='flex-row'>
+                            {
+                                abilities.map(hability => (
+                                    <p key={hability.ability?.name}>
+                                        {hability.ability?.name}
+                                    </p>
+                                ))
+                            }
+                        </div>
+                    </div>
+                </div>
 
-            <p><b>Types:</b> {character.types?.[0].type?.name}, 
-            {/* {character.types?.[1].type?.name} */}
-            </p>
+                <div><br /><hr /><br /></div>
 
-            <p><b>Special ability: </b>{character.abilities?.[0].ability?.name}
-            {/* {character.abilities?.[1].ability?.name} */}
-            </p>
-            
-            <p>Stats</p>
-            <p><b>HP: </b>{character.stats?.[0].base_stat}</p>
-            <p><b>Attack: </b>{character.stats?.[1].base_stat}</p>
-            <p><b>Defense: </b>{character.stats?.[2].base_stat}</p>
-            <p><b>Speed: </b>{character.stats?.[5].base_stat}</p>
-
-
-
-            <p><b>Movements: </b></p>
-            <div className='movements'>
-                {
-                    movements.map(movement =>(                        
-                        <p key={movement.move?.name}>
-                            {movement.move?.name}
-                        </p>
-                    ))
-                }
+                <div className='stats'>
+                    <p>STATS</p>
+                    <p><b>HP: </b>{character.stats?.[0].base_stat}</p>
+                    <p><b>Attack: </b>{character.stats?.[1].base_stat}</p>
+                    <p><b>Defense: </b>{character.stats?.[2].base_stat}</p>
+                    <p><b>Speed: </b>{character.stats?.[5].base_stat}</p>
+                </div>
             </div>
-            
+
+            <div className="box-detail">
+                <p><b>Movements: </b></p>
+                <div className='movements'>
+                    {
+                        movements.map(movement =>(                        
+                            <p key={movement.move?.name}>
+                                {movement.move?.name}
+                            </p>
+                        ))
+                    }
+                </div>
+            </div>
+
             
         </div>
     );
