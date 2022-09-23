@@ -49,15 +49,18 @@ const PokedexDetail = ({characterUrl}) => {
                     <img src={character.sprites?.other.dream_world?.front_default} alt="" width="200px"/>
                 </div>
                 <div>                    
-                    <p>#{character.id}</p>
+                    <p className='little'>#{character.id}</p>
                 </div>
                 <div>
                     <p>{character.name}</p>
                 </div>
+                
+                <div><br /><hr /><br /></div>
+                
                 <div className='flex-row'>
                     
-                        <p>Height: <br/> {character.height}</p>
-                        <p>Weight: <br /> {character.weight}</p>
+                        <p className='little'>Height: <br/> {character.height}</p>
+                        <p className='little'>Weight: <br /> {character.weight}</p>
                     
                 </div>
 
@@ -67,7 +70,7 @@ const PokedexDetail = ({characterUrl}) => {
                         <div className='flex-row'>
                             {
                                 types.map(type =>(
-                                    <p key={type.type?.name} >
+                                    <p key={type.type?.name} className='little' >
                                         {type.type?.name}
                                     </p>
                                 ))
@@ -79,7 +82,7 @@ const PokedexDetail = ({characterUrl}) => {
                         <div className='flex-row'>
                             {
                                 abilities.map(hability => (
-                                    <p key={hability.ability?.name}>
+                                    <p key={hability.ability?.name} className='little'>
                                         {hability.ability?.name}
                                     </p>
                                 ))
