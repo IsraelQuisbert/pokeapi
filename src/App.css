@@ -287,7 +287,9 @@ select{
   padding-top: 10px;
 }
 
-
+.stats p:first-child{
+  padding: 20px 0;
+}
 
 
 

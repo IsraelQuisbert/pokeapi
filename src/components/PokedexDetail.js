@@ -56,14 +56,14 @@ const PokedexDetail = ({characterUrl}) => {
                 </div>
                 
                 <div><br /><hr /><br /></div>
-                
+
                 <div className='flex-row'>
                     
                         <p className='little'>Height: <br/> {character.height}</p>
                         <p className='little'>Weight: <br /> {character.weight}</p>
                     
                 </div>
-
+                <br />
                 <div className='flex-row flex-row2'>
                     <div>
                         <p><b>Types:</b></p>
@@ -94,7 +94,7 @@ const PokedexDetail = ({characterUrl}) => {
                 <div><br /><hr /><br /></div>
 
                 <div className='stats'>
-                    <p>STATS</p>
+                    <p><b> STATS</b></p>
                     <p><b>HP: </b>{character.stats?.[0].base_stat}</p>
                     <p><b>Attack: </b>{character.stats?.[1].base_stat}</p>
                     <p><b>Defense: </b>{character.stats?.[2].base_stat}</p>
